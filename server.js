@@ -45,6 +45,11 @@ app.get('/', (req, res) => {
   }
 });
 
+
+app.use('/auth', authController);
+app.use(isSignedIn);
+app.use('/users/:userId/reviews', reviewsController);
+
 app.get('/vip-lounge', (req, res) => {
   if (req.session.user) {
     res.send(`Welcome to the party ${req.session.user.username}.`);
@@ -52,10 +57,6 @@ app.get('/vip-lounge', (req, res) => {
     res.send('Sorry, no guests allowed.');
   }
 });
-
-app.use('/auth', authController);
-app.use(isSignedIn);
-app.use('/users/:userId/reviews', reviewsController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
