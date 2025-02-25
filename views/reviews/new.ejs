@@ -8,7 +8,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Review</h1>
-    <form action="" method="">
+    <form action="/users/<%= user._id %>/reviews" method="POST">
       <label for="bodySize">My Typical Size:</label>
       <input type="text" name="bodySize" id="bodySize" />
 
@@ -44,6 +44,7 @@
         <option value="do not purchase">Don't Not Purchase</option>
         <option value="still deciding">Still Deciding</option>
       </select>
+      <button type="submit">Add Review</button>
     </form>
   </body>
 </html>
