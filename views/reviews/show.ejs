@@ -9,11 +9,14 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1><%= review.itemName %></h1>
     <% if (review.itemReview) { %>
-    <p>Notes: <%= review.itemReview %></p>
+    <p>Review: <%= review.itemReview %></p>
     <% } %> <% if (review.itemLink) { %>
-    <a href="<%= review.itemLink %>">View Style Review</a>
+    <a href="<%= review.itemLink %>">Click here for Item</a>
     <% } %>
     <p>Recommendation: <%= review.recommendation %></p>
+    <a href="/users/<%= user._id %>/reviews/<%= review._id %>/edit">
+        Edit this style file
+      </a>
     <form
       action="/users/<%= user._id %>/res/<%= review._id %>?_method=DELETE"
       method="POST"
