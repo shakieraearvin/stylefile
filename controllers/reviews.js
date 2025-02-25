@@ -65,7 +65,7 @@ router.get('/:reviewId', async (req, res) => {
   }
 });
 
-// DELETE Route 
+// DELETE Route '/users/:userId/reviews/:reviewsId
 router.delete('/:reviewId', async (req, res) => {
   try {
     // Look up the user from req.session
@@ -84,7 +84,7 @@ router.delete('/:reviewId', async (req, res) => {
   }
 });
 
-// EDIT Route
+// EDIT Route '/users/:userId/reviews/:reviewsId/edit
 router.get('/:reviewId/edit', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -98,7 +98,7 @@ router.get('/:reviewId/edit', async (req, res) => {
   }
 });
 
-// UPDATE Route
+// UPDATE Route '/users/:userId/reviews/:reviewsId
 
 router.put('/:reviewId', async (req, res) => {
   try {
@@ -122,6 +122,24 @@ router.put('/:reviewId', async (req, res) => {
   }
 });
 
+router.get('/community/:userId/:reviewId', async (req, res) => {
+  try {
+      console.log(req.params)
+    const communityUser = await User.findById(req.params.userId);
+    console.log(communityUser)
+    const review = communityUser.reviews.id(req.params.reviewId);
+    console.log(review)
+    
+    
+    res.render('reviews/vip.ejs', {
+      review: review,
+    });
+  } catch (error) {
+    
+    console.log(error);
+    res.redirect('/');
+  }
+});
 
 
 module.exports = router;

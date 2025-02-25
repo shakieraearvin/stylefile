@@ -14,14 +14,5 @@
     <a href="<%= review.itemLink %>">Click here for Item</a>
     <% } %>
     <p>Recommendation: <%= review.recommendation %></p>
-    <a href="/users/<%= user._id %>/reviews/<%= review._id %>/edit">
-        Edit this style file
-      </a>
-    <form
-      action="/users/<%= user._id %>/reviews/<%= review._id %>?_method=DELETE"
-      method="POST"
-    >
-      <button type="submit">Delete this style file</button>
-    </form>
   </body>
 </html>

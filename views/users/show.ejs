@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style File</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= user.username %>'s Style File</h1>
+
+    <% if (reviews && reviews.length > 0) { %>
+        <ul>
+            <% reviews.forEach(review => { %>
+                <li>
+                    <a href="/users/<%=user.id%>/reviews/community/<%=user.id%>/<%=review.id%>"><%= review.itemName %></a>
+                </li> 
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>EMPTY STYLE FILE</p>
+    <% } %>
+    <a href="/">Back to My Style File</a>
+  </body>
+</html>
