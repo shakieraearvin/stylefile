@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= review.itemName %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= review.itemName %></h1>
+    <% if (review.itemReview) { %>
+    <p>Notes: <%= review.itemReview %></p>
+    <% } %> <% if (review.itemLink) { %>
+    <a href="<%= review.itemLink %>">View Style Review</a>
+    <% } %>
+    <p>Recommendation: <%= review.recommendation %></p>
+  </body>
+</html>

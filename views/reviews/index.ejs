@@ -11,5 +11,14 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Style File</h1>
     <a href="/users/<%=user._id%>/reviews/new">Add a Review</a>
+    <ul>
+      <% reviews.forEach((review)=>{ %>
+      <li>
+        <a href="/users/<%= user._id %>/reviews/<%= review._id %>">
+        <%= review.itemName %>
+      </a>
+      </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
