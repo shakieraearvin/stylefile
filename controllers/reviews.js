@@ -15,6 +15,10 @@ router.get('/', (req, res) => {
   }
   });
   
+//GET /users/:userId/reviews/new
+router.get('/new', async (req, res) => {
+  res.render('reviews/new.ejs');
+});
 
 
 module.exports = router;
