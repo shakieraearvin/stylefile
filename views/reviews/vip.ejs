@@ -3,17 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= review.itemName %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= review.itemName %></h1>
-    <% if (review.itemReview) { %>
-    <p>Review: <%= review.itemReview %></p>
-    <% } %> <% if (review.itemLink) { %>
-    <a href="<%= review.itemLink %>">Click here for Item</a>
-    <% } %>
-    <p>Recommendation: <%= review.recommendation %></p>
+    <div class="show-body">
+      <div class="show-header">
+        <h1><%= review.itemName %></h1> 
+        <div class="show-sidebar">
+          <div class="show-actions">
+            <form
+              action="/users/<%= user._id %>/reviews/<%= review._id %>?_method=DELETE"
+              method="POST"
+            >
+            </form>
+          </div>
+          <p>Recommendation: <%= review.recommendation %></p>
+        </div>
+      </div>
+      <div class="show-notes-container">
+        <% if (review.itemLink) { %>
+          <a href="<%= review.itemLink %>" target="_blank">Click here for Item</a>
+        <% } %> 
+        <% if (review.itemReview) { %>
+          <div class="show-notes">
+            <h2>Review:</h2>
+            <p><%= review.itemReview %></p>
+          </div>
+        <% } %>
+      </div>
+    </div>
   </body>
 </html>
