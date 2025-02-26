@@ -11,8 +11,8 @@
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
-        <h1>Edit <%= review.itemName %>
-        </h1>
+    <div class="edit-body">
+        <h1>Edit <%= review.itemName %></h1>
         <form action="/users/<%= user._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
 
         <label for="bodySize">My Typical Size:</label>
@@ -75,6 +75,7 @@
             </select>
             <button type="submit">Update Review</button>
             </form>
+            </div>
 </body>
 
 </html>

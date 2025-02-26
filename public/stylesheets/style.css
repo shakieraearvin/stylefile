@@ -11,7 +11,7 @@ body {
     width: 100vw;
     background-color: #9ac2ef;
   }
-  /* public/stylesheets/style.css */
+  /* start of index page styling*/
 
 .index-body {
     background-image: url(https://cdn.pixabay.com/photo/2018/08/18/22/45/closet-3615613_1280.jpg);
@@ -89,8 +89,9 @@ body {
   .signin-link:hover {
     background-color: #ffffff;
   }
-  
-  /* public/stylesheets/style.css */
+  /* end of index page css */
+
+/* start of signin and sign up page  */
 
 .signin-container,
 .signup-container {
@@ -133,4 +134,107 @@ button {
   border: none;
   margin: 15px 0;
   font-size: 1.1em;
-}
+} 
+
+/* ending of signin and sign up */
+
+/* styling for reviews/index.ejs page
+after sign in 
+
+/* public/stylesheets/style.css */
+
+.all-reviews-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .all-reviews-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 90%;
+  }
+  
+  .add-review-link {
+    padding: 10px;
+    background-color: #ce4866;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1em;
+    padding: 2px 25px;
+    text-decoration: none;
+  }
+  
+  .add-review-link:hover {
+    background-color: #e84a6c;
+  }
+/*style ending for reviews/index.ejs  
+
+/* styling for lists on the reviews landing page */
+/* public/stylesheets/style.css */
+
+ul li a {
+    text-decoration: none;
+    color: #1c2e5b;
+    width: 50%;
+    background-color: #f6e7e7;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: center;
+    display: block; /* Makes <a> take full width */
+  }
+
+  ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;       /* Removes default padding */
+    margin: 0;        /* Removes default margin */
+  }
+  
+
+ul li a:hover {
+    background-color: #4b598e;
+    color: white;
+  }
+  /* end of styling for the reviews landing page  */
+
+  /* styling for the add the review pag  */
+  /* public/stylesheets/style.css */
+
+.new-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .new-body > form,
+  .edit-body > form {
+    height: 70%;
+  }
+  
+  textarea,
+  select {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  select {
+    margin-bottom: 10px;
+  }
+  
+  .edit-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  /* end of styling for add review page  */

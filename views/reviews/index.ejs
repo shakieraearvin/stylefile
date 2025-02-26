@@ -10,8 +10,12 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="all-reviews-body">
+      <div class="all-reviews-header">
     <h1>Your Style File</h1>
-    <a href="/users/<%=user._id%>/reviews/new">Add a Review</a>
+    <a class="add-review-link" href="/users/<%=user._id%>/reviews/new">Add a Review</a>
+    >
+  </div>
     <ul>
       <% reviews.forEach((review)=>{ %>
       <li>

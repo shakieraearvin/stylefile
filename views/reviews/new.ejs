@@ -9,6 +9,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Review</h1>
+    <div class="new-body">
     <form action="/users/<%= user._id %>/reviews" method="POST">
       <label for="bodySize">My Typical Size:</label>
       <input type="text" name="bodySize" id="bodySize" />
@@ -48,5 +49,6 @@
       </select>
       <button type="submit">Add Review</button>
     </form>
+  </div>
   </body>
 </html>
