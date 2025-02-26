@@ -11,84 +11,136 @@ body {
     width: 100vw;
     background-color: #9ac2ef;
   }
-  /* start of index page styling*/
 
+  /* start of index page styling*/
+/* Background Styling */
 .index-body {
     background-image: url(https://cdn.pixabay.com/photo/2018/08/18/22/45/closet-3615613_1280.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     min-height: 100vh;
     width: 100vw;
-    color: white;
-  }
+    color: #2F2D2C; /* Deep Charcoal for strong contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
 
-  .text-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+/* Dark Overlay to Improve Readability on Background Image */
+.index-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-  }
-  
-  .main-header {
+    background: rgba(0, 0, 0, 0.4); /* Ensures contrast for readability */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Positioning Auth Links at the Top Left */
+.auth-links {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     display: flex;
+    gap: 15px;
+    z-index: 2; /* Ensures it's above the overlay */
+}
+
+/* Button Styling */
+.signup-link,
+.signin-link {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 25px;
     font-weight: bold;
-    color: white;
-    font-size: 5.6em;
-    margin: -160px 20px 0 20px;
-  }
-  
-  .subheader {
-    margin: 0 20px 0 20px;
-    font-size: 1.4em;
-  }
-  
-  .index-container {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Signup Button */
+.signup-link {
+    background: #B89C75; /* Muted Gold */
+    color: #2F2D2C;
+    border: 2px solid transparent;
+}
+
+.signup-link:hover {
+    background: white;
+    color: #B89C75;
+    border: 2px solid #B89C75;
+}
+
+/* Signin Button */
+.signin-link {
+    background: #6E8B87; /* Muted Teal */
+    color: #F5F5F2;
+    border: 2px solid transparent;
+}
+
+.signin-link:hover {
+    background: white;
+    color: #6E8B87;
+    border: 2px solid #6E8B87;
+}
+
+/* Main Content */
+.text-container {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    max-width: 1200px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .auth-links {
-    position: fixed;
-    display: inline;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 80px 0 0;
-    height: 100%;
-  }
-  
-  .signup-link,
-  .signin-link {
-    text-decoration: none;
-    font-size: 1.5em;
-    padding: 8px 0;
-    border-radius: 25px;
-    width: 10em;
+}
+
+/* Main Header - Centered and Styled with Two Lines */
+.main-header {
+    font-weight: bold;
+    font-size: 4.5em;
+    color: #F5F5F2; /* White for readability */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Playfair Display', serif; /* Elegant, bold serif font */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6); /* Stronger shadow for contrast */
+    padding-bottom: 10px;
+    border-bottom: 3px solid #B89C75; /* Gold underline effect */
+    display: flex;
+    flex-direction: column; /* Ensures "The" is above "Style File" */
+    align-items: center;
     text-align: center;
-  }
-  
-  .signup-link {
-    background-color: #791228;
-    color: white;
-    margin: 0 0 20px 0;
-  }
-  
-  .signup-link:hover {
-    background-color: #ff5378;
-  }
-  
-  .signin-link {
-    background-color: #f6e7e7;
-    color: #1c2e5b;
-    margin: 20px 0 0 0;
-  }
-  
-  .signin-link:hover {
-    background-color: #ffffff;
-  }
+    line-height: 1.2;
+}
+
+/* Ensures "The" stays alone while "Style File" stays together */
+.main-header span:nth-child(1) { /* Targets "The" */
+    display: block;
+}
+
+.main-header span:nth-child(2) { /* Targets "Style File" */
+    display: block;
+    white-space: nowrap; /* Prevents breaking into two lines */
+}
+
+/* Subheader Styling */
+.subheader {
+    font-size: 1.6em;
+    max-width: 800px;
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #F5F5F2; /* White for contrast */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
   /* end of index page css */
 
 /* start of signin and sign up page  */
@@ -238,3 +290,32 @@ ul li a:hover {
     height: 100%;
   }
   /* end of styling for add review page  */
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 3.5em;
+    }
+    .subheader {
+        font-size: 1.3em;
+    }
+    .signup-link,
+    .signin-link {
+        font-size: 1.1em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        font-size: 2.8em;
+    }
+    .subheader {
+        font-size: 1.1em;
+    }
+    .signup-link,
+    .signin-link {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
+}
