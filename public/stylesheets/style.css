@@ -211,60 +211,96 @@ button:hover {
   color: white;
 }
 
+/* add review page and your style file page  */
 .all-reviews-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/images/2.png'); /* Corrected path */
-    background-size: contain; /* Makes the image smaller */
+    background-image: url('/images/1.png'); /* Keeps the image the same */
+    background-size: contain; /* Ensures the image is appropriately sized */
     background-position: center top; /* Centers image */
     background-repeat: no-repeat;
     min-height: 100vh;
     color: #2F2D2C; /* Ensures text is readable */
     position: relative;
-  }
-  
-  .all-reviews-header {
+}
+
+/* Centering Header in the Image */
+.all-reviews-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/1.png'); /* Keeps the image the same */
+    background-size: contain; /* Ensures the image is appropriately sized */
+    background-position: center top; /* Centers image */
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: #2F2D2C; /* Ensures text is readable */
+    position: relative;
+}
+
+/* Centering Header in the Image */
+.all-reviews-header {
     position: absolute;
-    top: 50%; /* Centers the text in the middle of the image */
-    left: 48%;
+    top: 45%; /* Centers text vertically */
+    left: 35%; /* Moves text towards the left */
     transform: translate(-50%, -50%);
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
     text-transform: uppercase;
-    color: #F5F5F2; /* White for contrast */
+    color: #B89C75;
     font-family: 'Playfair Display', serif;
     text-align: center;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Adds depth */
-  }
-  
-  /* Add Review Button - Positioned at Top Right */
-  .add-review-link {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.all-reviews-header span {
+    display: block;
+}
+
+/* Moving Add Review Button and Review Links to the Right */
+.add-review-link {
     position: absolute;
-    top: -275px; /* Moves button to top */
-    right: -50px; /* Moves button to right */
-    padding: 10px;
-    background-color: #B89C75; /* Muted Gold */
-    color: #2F2D2C;
+    top: 70%; /* Centers it vertically on the right side */
+    right: 35%; /* Moves it to the right side of the image */
+    padding: 10px 25px;
+    background-color: #6E8B87;
+    color: white;
     border-radius: 30px;
     border: none;
-    font-size: .8em;
+    font-size: 0.8em;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 25px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  .add-review-link:hover {
-    background-color: #6E8B87; /* Muted Teal */
+}
+
+.add-review-link:hover {
+    background-color: #B89C75;
     color: white;
-  }
-  
-  
+}
+
+/* Position Review List on the Right Side in the Center */
+.all-reviews-list {
+    position: absolute;
+    right: 36%;
+    top: 35%; /* Centers it vertically */
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #2F2D2C;
+    text-align: left;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 /* ========================= */
-/* LIST STYLING FOR REVIEWS LANDING PAGE */
+/* STYLING FOR REVIEWS LANDING PAGE */
 /* ========================= */
 
 ul {
@@ -299,11 +335,25 @@ ul li a:hover {
 .new-body,
 .edit-body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: #E6E0D4; /* Soft Beige */
+  padding-top: 80px; /* Ensures spacing under navbar */
 }
+
+.edit-body h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6E8B87; /* Muted Gold - Matches the theme */
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
 
 .new-body > form,
 .edit-body > form {

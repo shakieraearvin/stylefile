@@ -10,20 +10,30 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+
     <div class="all-reviews-body">
+      <!-- Header Positioned in Center -->
       <div class="all-reviews-header">
-    <h1>Your Style File</h1>
-    <a class="add-review-link" href="/users/<%=user._id%>/reviews/new">Add a Review</a>
-    
-  </div>
-    <ul>
-      <% reviews.forEach((review)=>{ %>
-      <li>
-        <a href="/users/<%= user._id %>/reviews/<%= review._id %>">
-        <%= review.itemName %>
-      </a>
-      </li>
-      <% }) %>
-    </ul>
+        <h1>
+          <span>Your</span>
+          <span>Style</span>
+          <span>File</span>
+        </h1>
+      </div>
+
+      <!-- Move Add Review Button OUT of the Header -->
+      <a class="add-review-link" href="/users/<%=user._id%>/reviews/new">Add a Review</a>
+
+      <!-- Move Review List OUT of the Header -->
+      <ul class="all-reviews-list">
+        <% reviews.forEach((review) => { %>
+        <li>
+          <a href="/users/<%= user._id %>/reviews/<%= review._id %>">
+            <%= review.itemName %>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </body>
 </html>
