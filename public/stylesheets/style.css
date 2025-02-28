@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Permanent+Marker&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* public/stylesheets/style.css */
@@ -223,26 +221,24 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/images/1.png'); /* Keeps the image the same */
-    background-size: contain; /* Ensures the image is appropriately sized */
-    background-position: center top; /* Centers image */
+    background-image: url('/images/1.png'); 
+    background-size: contain;
+    background-position: center top; 
     background-repeat: no-repeat;
     min-height: 100vh;
-    color: #2F2D2C; /* Ensures text is readable */
+    color: #2F2D2C; 
     position: relative;
 }
 
-/* Centering Header in the Image */
 .all-reviews-header {
     position: absolute;
-    top: 40%; /* Centers text vertically */
-    left: 34%; /* Moves text towards the left */
+    top: 40%;
+    left: 34%; 
     transform: translate(-50%, -50%);
     font-size: 2.5vw;
     font-weight: bold;
     text-transform: uppercase;
     color: #B89C75;
-    font-family: 'Playfair Display', serif;
     text-align: center;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -256,12 +252,13 @@ button:hover {
     display: block;
 }
 
-/* Moving Add Review Button and Review Links to the Right */
 .add-review-link {
     position: absolute;
-    top: 70%; /* Centers it vertically on the right side */
-    right: 35%; /* Moves it to the right side of the image */
+    top: 70%; 
+    right: 34%; 
     padding: 10px 25px;
+    text-transform: uppercase;
+    transform: translate(0%, -50%);
     background-color: #6E8B87;
     color: white;
     border-radius: 30px;
@@ -277,19 +274,45 @@ button:hover {
     color: white;
 }
 
-/* Position Review List on the Right Side in the Center */
 .all-reviews-list {
     position: absolute;
-    right: 36%;
-    top: 35%; /* Centers it vertically */
-    transform: translateY(-50%);
+    top: 20%; 
+    right: 10%; 
+    transform: translate(-25%, 40%);
     font-size: 1.2em;
     color: #2F2D2C;
-    text-align: left;
+    text-align: center;
     list-style: none;
     font-family: 'Poppins', sans-serif;
-}
+    min-width: 250px; 
+    max-width: none; 
+    padding: 10px;
+    white-space: nowrap; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+} 
 
+.all-reviews-list a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+    transform: translateX(-185%);
+    background-color: #6E8B87;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; 
+    min-width: 150px; 
+    width: auto; 
+    max-width: 100%; 
+    text-align: center;
+}
 
 /* ========================= */
 /* STYLING FOR REVIEWS LANDING PAGE */
@@ -303,6 +326,7 @@ ul {
 
 ul li a {
   text-decoration: none;
+  text-transform: uppercase;
   color: #2F2D2C;
   width: 50%;
   background-color: #D6C7AE; /* Warm Taupe */
@@ -360,73 +384,3 @@ ul li a:hover {
 /* RESPONSIVE DESIGN */
 /* ========================= */
 
-@media (max-width: 768px) {
-    .main-header {
-      font-size: 3.5em;
-    }
-    .subheader {
-      font-size: 1.3em;
-    }
-    .signup-link,
-    .signin-link {
-      font-size: 1.1em;
-      padding: 8px 16px;
-    }
-    form {
-      width: 80%;
-    }
-    .edit-body h1 {
-      font-size: 2em;
-      margin-top: 20px;
-    }
-    .add-review-link {
-      font-size: 1em;
-      padding: 8px 14px;
-    }
-    .all-reviews-list {
-      font-size: 1em;
-      left: auto;
-      right: 5%;
-    }
-    .all-reviews-header {
-        font-size: 5vw; /* Increases font size on smaller screens */
-        top: 48%; /* Adjusts position for medium screens */
-      }
-  }
-  
-  @media (max-width: 480px) {
-    .main-header {
-      font-size: 2.8em;
-    }
-    .subheader {
-      font-size: 1.1em;
-    }
-    .signup-link,
-    .signin-link {
-      font-size: 1em;
-      padding: 6px 12px;
-    }
-    form {
-      width: 90%;
-      padding: 20px;
-    }
-    .edit-body h1 {
-      font-size: 1.8em;
-      margin-top: 15px;
-    }
-    .add-review-link {
-      font-size: 0.9em;
-      padding: 6px 12px;
-    }
-    .all-reviews-list {
-      font-size: 0.9em;
-      left: auto;
-      right: 5%;
-    }
-    .all-reviews-header {
-        font-size: 6vw; /* Increases size for small screens */
-        top: 46%; /* Moves text up slightly */
-        width: 90%; /* Ensures text fits within the image */
-      }
-  }
-  

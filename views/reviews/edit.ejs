@@ -16,7 +16,7 @@
         <form action="/users/<%= user._id %>/reviews/<%= review._id %>?_method=PUT" method="POST">
 
         <label for="bodySize">My Typical Size:</label>
-        <input type="text" name="bodySize" id="bodySize" value="<%= review.bodySize %>">
+        <input type="text" name="bodySize" id="bodySize" value="<%= review.bodySize %>"required>
 
         <label for="bodyHeight">My Height:</label>
         <input type="text" name="bodyHeight" id="bodyHeight" value="<%= review.bodyHeight %>">
