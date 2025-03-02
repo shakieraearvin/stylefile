@@ -6,21 +6,25 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Style File</title>
   </head>
-  <body>
+  <body style="background-image: url('/images/(1).png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= user.username %>'s Style File</h1>
-
-    <% if (reviews && reviews.length > 0) { %>
-        <ul>
-            <% reviews.forEach(review => { %>
-                <li>
-                    <a href="/users/<%=user.id%>/reviews/community/<%=user.id%>/<%=review.id%>"><%= review.itemName %></a>
-                </li> 
-            <% }) %>
-        </ul>
-    <% } else { %>
-        <p>EMPTY STYLE FILE</p>
-    <% } %>
-    <a href="/">Back to My Style File</a>
-  </body>
+    
+    <div class="style-file-content">
+        <h1 class="style-file-header"><%= user.username %>'s Style File</h1>
+        <% if (reviews && reviews.length > 0) { %>
+            <ul class="style-file-list">
+                <% reviews.forEach(review => { %>
+                    <li>
+                        <a class="style-file-link" href="/users/<%=user.id%>/reviews/community/<%=user.id%>/<%=review.id%>">
+                            <%= review.itemName %>
+                        </a>
+                    </li> 
+                <% }) %>
+            </ul>
+        <% } else { %>
+            <p class="empty-message">EMPTY STYLE FILE</p>
+        <% } %>
+        <a class="back-link" href="/">Back to My Style File</a>
+    </div>
+</body>
 </html>

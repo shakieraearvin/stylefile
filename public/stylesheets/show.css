@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -37,6 +37,7 @@ body {
   .show-actions {
     display: flex;
     flex-direction: row;
+    text-transform: capitalize;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -50,12 +51,15 @@ body {
     border-radius: 30px;
     border: 2px solid transparent;
     font-size: 1.1em;
-    width: 10em;
+    width: auto; /* Allows button to expand based on text */
+    min-width: 10em; /* Ensures a minimum width */
     margin: 5px;
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: capitalize;
     transition: all 0.3s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap; /* Prevents text wrapping */
   }
   
   button:hover {
@@ -87,15 +91,17 @@ body {
   
   p {
     color: #5A4A3A;
+    text-transform: capitalize;
     font-weight: bold;
     font-size: 1.4em;
-    margin: 10px 30px;
+    margin: 30px 30px;
     text-align: center;
   }
   
   .show-notes-container {
     width: 90%;
     margin: 20px 0;
+    
   }
   
   .show-notes-container > a {
@@ -119,16 +125,20 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
   
-  h2 {
+  h3 {
     margin: 0 10px;
     color: #5A4A3A;
+    text-transform: capitalize;
     font-family: 'Playfair Display', serif;
   }
   
   .show-notes > p {
     font-weight: normal;
+    text-transform: capitalize;
     color: #5A4A3A;
     text-align: left;
     font-size: 1.2em;
   }
+
+  
   

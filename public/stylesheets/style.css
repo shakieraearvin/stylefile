@@ -168,7 +168,7 @@ h1 {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Form Styling */
+/* sign in form  */
 form {
   display: flex;
   flex-direction: column;
@@ -221,7 +221,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url('/images/1.png'); 
+    background-image: url('/images/your style file.png'); 
     background-size: contain;
     background-position: center top; 
     background-repeat: no-repeat;
@@ -283,7 +283,7 @@ button:hover {
     color: #2F2D2C;
     text-align: center;
     list-style: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif"', serif;
     min-width: 250px; 
     max-width: none; 
     padding: 10px;
@@ -363,10 +363,11 @@ ul li a:hover {
   font-size: 2.5em;
   font-weight: bold;
   text-transform: uppercase;
-  color: #6E8B87; /* Muted Gold - Matches the theme */
+  color: #6E8B87; 
   font-family: 'Playfair Display', serif;
   text-align: center;
-  margin-bottom: 20px;
+  position: relative;
+  top: -180px;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -374,13 +375,141 @@ ul li a:hover {
 .new-body > form,
 .edit-body > form {
   height: auto;
+  margin-top: -150px;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ========================= */
-/* RESPONSIVE DESIGN */
-/* ========================= */
+/* Vip Community  */
+.community {
+    position: absolute;
+    top: 15%; /* Moves to the top */
+    left: 10%; /* Aligns left */
+    transform: translate(0, 0);
+}
+.community a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #6E8B87;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents text wrapping */
+    min-width: 150px; /* Prevents button from being too small */
+    width: auto; /* Expands dynamically with text */
+    max-width: 100%; /* Prevents excessive expansion */
+    text-align: center;
+}
+
+.community a:hover {
+    background-color: #B89C75;
+    color: white;
+}
+
+.community-image {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center; /* Centers it more without pushing too far left */
+}
+
+.community-image img {
+    display: block;
+    width: 150%; /* Increases size by 50% */
+    height: auto;
+    max-width: 900px; /* Limits how large it can grow */
+    margin-top: 100px;
+    margin-left: auto; /* Pushes image toward the right */
+    margin-right: 250px; /* Adjusts space to the right */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+/* community individual page  */
+.style-file-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: contain; /* Keeps image smaller */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #2F2D2C; /* Deep Charcoal */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/* New Flexbox Wrapper for Content */
+.style-file-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%; /* Centers in the image */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Keeps it centered within the page */
+    max-width: 600px; /* Prevents it from being too wide */
+}
+
+/* List stays centered & expands when more buttons are added */
+.style-file-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Gives space below the header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+/* Buttons dynamically adjust */
+.style-file-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #6E8B87;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+    min-width: 150px;
+    width: auto;
+    text-align: center;
+}
+
+/* Prevents overlap issues when multiple buttons are present */
+.style-file-link:hover {
+    background-color: #B89C75;
+    color: white;
+}
+
+/* Back Link Styled the Same */
+.back-link {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #B89C75;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-link:hover {
+    background-color: #6E8B87;
+    color: white;
+}
 
