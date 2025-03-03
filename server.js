@@ -26,7 +26,6 @@ mongoose.connection.on('connected', () => {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
@@ -39,7 +38,7 @@ app.use(
 
 app.use(passUserToView);
 
-//GET /users/:userId/reviews
+
 app.get('/', (req, res) => {
   if (req.session.user) {
     res.redirect(`/users/${req.session.user._id}/reviews`);

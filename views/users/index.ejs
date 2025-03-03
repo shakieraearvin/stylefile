@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Users Index</title>
-  </head>
-  <body>
-   
+</head>
+
+<body>
+
     <%- include('../partials/_navbar.ejs') %>
-   <div class ='community'>
-    <ul>
-        <% users.forEach(communityUser => { %>
-            <li><a href="/users/<%= user._id %>/users/<%= communityUser._id %>"><%= communityUser.username %></a></li>
-          <% }) %>
-      </ul>
-    </div>
-    <div class="community-image">
-        <img src="https://poisefoundation.org/wp-content/uploads/2024/04/Screenshot-2024-04-06-at-4.01.30%E2%80%AFPM-1024x546.png" alt="Community of Women">
-    </div>
-  </body>
+        <div class='community'>
+            <ul>
+                <% users.forEach(communityUser=> { %>
+                    <li><a href="/users/<%= user._id %>/users/<%= communityUser._id %>">
+                            <%= communityUser.username %>
+                        </a></li>
+                    <% }) %>
+            </ul>
+        </div>
+        <div class="community-image">
+            <img src="https://poisefoundation.org/wp-content/uploads/2024/04/Screenshot-2024-04-06-at-4.01.30%E2%80%AFPM-1024x546.png"
+                alt="Community of Women">
+        </div>
+</body>
+
 </html>

@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: white; /* Matches Index Page */
+    background-color: white;
   }
   
   .show-body {
@@ -28,7 +28,7 @@ body {
   }
   
   .show-header > h1 {
-    color: #5A4A3A; /* Espresso */
+    color: #5A4A3A; 
     font-size: 3.4em;
     margin-left: 10px;
     font-family: 'Playfair Display', serif;
@@ -46,20 +46,20 @@ body {
   
   button {
     padding: 10px 12px;
-    background: #B89C75; /* Muted Gold */
+    background: #B89C75;
     color: #2F2D2C;
     border-radius: 30px;
     border: 2px solid transparent;
     font-size: 1.1em;
-    width: auto; /* Allows button to expand based on text */
-    min-width: 10em; /* Ensures a minimum width */
+    width: auto; 
+    min-width: 10em; 
     margin: 5px;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     text-transform: capitalize;
     transition: all 0.3s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    white-space: nowrap; /* Prevents text wrapping */
+    white-space: nowrap; 
   }
   
   button:hover {
@@ -69,7 +69,7 @@ body {
   }
   
   .show-actions > a {
-    background: #6E8B87; /* Muted Teal */
+    background: #6E8B87; 
     color: #F5F5F2;
     text-decoration: none;
     font-size: 1.1em;
@@ -117,7 +117,7 @@ body {
   }
   
   .show-notes {
-    background-color: #F5F5F2; /* Soft White */
+    background-color: #F5F5F2; 
     width: 85%;
     border-radius: 20px;
     padding: 40px 40px 20px 40px;

@@ -57,9 +57,11 @@ Style File was created to help fashion lovers like me to keep track of their war
 
 ### **Attributions**
 
-* [Pixabay](https://pixabay.com/photos/search/communuty%20/)
+* [Pixabay](https://pixabay.com/photos/closet-clothing-walk-in-3615613/)
 
-* [Bootstrap Icons](https://icons.getbootstrap.com/)
+* [Community Picture](https://poisefoundation.org/wp-content/uploads/2024/04/Screenshot-2024-04-06-at-4.01.30%E2%80%AFPM-1024x546.png)
+
+* [Made images using Canva](https://www.canva.com/)
 
 * [W3 Schools](https://www.w3schools.com/)
 
@@ -67,7 +69,7 @@ Style File was created to help fashion lovers like me to keep track of their war
 
 * [Google Fonts](https://fonts.google.com/) (Playfair Display, PT Serif, Poppins)
 
-* [WCAG Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/)
+* [WCAG Accessibility Guidelines](https://webaim.org/resources/contrastchecker/)
 
 ### **Future Enhancements**
 

@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Add a New Review</title>
-  </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Add a New Review</title>
+</head>
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Review</h1>
     <div class="new-body">
       <form action="/users/<%= user._id %>/reviews" method="POST">
         <label for="bodySize">My Typical Size:</label>
         <input type="text" name="bodySize" id="bodySize" required />
-      
+
         <label for="bodyHeight">My Height:</label>
         <input type="text" name="bodyHeight" id="bodyHeight" required />
-      
+
         <label for="bodyWeight">Weight:</label>
         <input type="text" name="bodyWeight" id="bodyWeight" required />
-      
+
         <label for="bodyType">Body Type:</label>
         <select id="bodyType" name="bodyType" required>
           <option value="" disabled selected>Select your body type</option>
@@ -29,19 +31,19 @@
           <option value="pear">Pear</option>
           <option value="apple">Apple</option>
         </select>
-      
+
         <label for="itemName">Item Name:</label>
         <input type="text" name="itemName" id="itemName" required />
-        
+
         <label for="itemSize">Item Size:</label>
         <textarea name="itemSize" id="itemSize" required></textarea>
-      
+
         <label for="itemReview">Review:</label>
         <textarea name="itemReview" id="itemReview" required></textarea>
-      
+
         <label for="itemLink">Item Link:</label>
         <input type="url" name="itemLink" id="itemLink" required />
-      
+
         <label for="recommendation">Recommendation:</label>
         <select id="recommendation" name="recommendation" required>
           <option value="" disabled selected>Select recommendation</option>
@@ -49,9 +51,10 @@
           <option value="do not purchase">Do Not Purchase</option>
           <option value="still deciding">Still Deciding</option>
         </select>
-      
+
         <button type="submit">Add Review</button>
       </form>
-  </div>
-  </body>
+    </div>
+</body>
+
 </html>

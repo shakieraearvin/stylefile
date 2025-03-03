@@ -1,4 +1,4 @@
-/* public/stylesheets/partials.css */
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -6,12 +6,12 @@
     padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
-    background-color: #F5F5F2; /* Soft White - Matches Index Page */
+    background-color: #F5F5F2; 
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   #nav-header {
-    color: #5A4A3A; /* Espresso */
+    color: #5A4A3A; 
     font-size: 1.2em;
     font-weight: bold;
     margin: 0;
@@ -21,7 +21,7 @@
   .authlink {
     text-decoration: none;
     margin: 0 15px;
-    color: #6E8B87; /* Muted Teal */
+    color: #6E8B87; 
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     padding: 8px 12px;

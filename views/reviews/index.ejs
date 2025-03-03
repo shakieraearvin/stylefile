@@ -2,28 +2,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Your Style File</title>
-  </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Your Style File</title>
+</head>
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
 
     <div class="all-reviews-body">
-     
+
       <a class="add-review-link" href="/users/<%=user._id%>/reviews/new">Add a Review</a>
 
       <ul class="all-reviews-list">
-        <% reviews.forEach((review) => { %>
-        <li>
-          <a href="/users/<%= user._id %>/reviews/<%= review._id %>">
-            <%= review.itemName %>
-          </a>
-        </li>
-        <% }) %>
+        <% reviews.forEach((review)=> { %>
+          <li>
+            <a href="/users/<%= user._id %>/reviews/<%= review._id %>">
+              <%= review.itemName %>
+            </a>
+          </li>
+          <% }) %>
       </ul>
     </div>
-  </body>
+</body>
+
 </html>

@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
         const allUsers = await User.find();
         res.render('users/index.ejs', { users: allUsers });
     } catch (error) {
-        console.log(error);
+     
         res.redirect('/');
     }
 });
@@ -18,9 +18,9 @@ router.get('/:userId', async (req, res) => {
     try {
         const user = await User.findById(req.params.userId);
 
-        res.render('users/show.ejs', { user, reviews: user.reviews }); // Pass user data to show.ejs
+        res.render('users/show.ejs', { user, reviews: user.reviews });
     } catch (error) {
-        console.log(error);
+      
         res.redirect('/');
     }
 });
